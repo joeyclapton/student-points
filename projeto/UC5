@@ -1,1 +1,91 @@
-<mxfile host="app.diagrams.net" modified="2021-11-07T23:57:28.995Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36 Edg/95.0.1020.40" version="15.7.0" etag="wCQcd8KvDPw6lLj3X4iZ" type="github"><diagram id="D59bYKg1sIyNh5IDUVYC">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2021-11-08T00:25:35.475Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36 Edg/95.0.1020.40" etag="CQ6hpTj6_eawjy3P8UVN" version="15.7.0" type="github">
+  <diagram id="D59bYKg1sIyNh5IDUVYC" name="Page-1">
+    <mxGraphModel dx="1072" dy="686" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="vcdz9cu3LAZGO0Cs-m67-4" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="227" y="360" as="sourcePoint" />
+            <mxPoint x="407" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vcdz9cu3LAZGO0Cs-m67-5" value="cadastrarVantagem()" style="text;align=center;fontStyle=1;verticalAlign=middle;spacingLeft=3;spacingRight=3;strokeColor=none;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=9;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="277" y="330" width="80" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="vcdz9cu3LAZGO0Cs-m67-6" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fontSize=9;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="35" y="290" width="10" height="390" as="geometry" />
+        </mxCell>
+        <mxCell id="vcdz9cu3LAZGO0Cs-m67-7" value="" style="shape=umlLifeline;participant=umlActor;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;verticalAlign=top;spacingTop=36;outlineConnect=0;fontSize=9;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="30" y="200" width="20" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="vcdz9cu3LAZGO0Cs-m67-8" value="Usuario&#xa;Parceiro" style="text;align=center;fontStyle=1;verticalAlign=middle;spacingLeft=3;spacingRight=3;strokeColor=none;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="30" y="240" width="80" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="vcdz9cu3LAZGO0Cs-m67-9" value="cadastrarVantagem()" style="text;align=center;fontStyle=1;verticalAlign=middle;spacingLeft=3;spacingRight=3;strokeColor=none;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=9;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="77" y="330" width="80" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="vcdz9cu3LAZGO0Cs-m67-10" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="50" y="360" as="sourcePoint" />
+            <mxPoint x="207" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vcdz9cu3LAZGO0Cs-m67-11" value=":vantagemController" style="shape=umlLifeline;perimeter=lifelinePerimeter;container=1;collapsible=0;recursiveResize=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="357" y="210" width="140" height="460" as="geometry" />
+        </mxCell>
+        <mxCell id="vcdz9cu3LAZGO0Cs-m67-12" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;" vertex="1" parent="vcdz9cu3LAZGO0Cs-m67-11">
+          <mxGeometry x="65" y="90" width="10" height="370" as="geometry" />
+        </mxCell>
+        <mxCell id="vcdz9cu3LAZGO0Cs-m67-33" value=":vantagem" style="shape=umlLifeline;perimeter=lifelinePerimeter;container=1;collapsible=0;recursiveResize=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="690" y="190" width="140" height="460" as="geometry" />
+        </mxCell>
+        <mxCell id="vcdz9cu3LAZGO0Cs-m67-34" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;" vertex="1" parent="vcdz9cu3LAZGO0Cs-m67-33">
+          <mxGeometry x="65" y="90" width="10" height="370" as="geometry" />
+        </mxCell>
+        <mxCell id="vcdz9cu3LAZGO0Cs-m67-35" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;" edge="1" parent="1" target="vcdz9cu3LAZGO0Cs-m67-33">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="440" y="364.66" as="sourcePoint" />
+            <mxPoint x="710" y="365" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vcdz9cu3LAZGO0Cs-m67-36" value=" cadastrarVantagem(valor double, descricao string, foto string): boolean" style="text;align=center;fontStyle=1;verticalAlign=middle;spacingLeft=3;spacingRight=3;strokeColor=none;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=9;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="550" y="320" width="80" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="vcdz9cu3LAZGO0Cs-m67-38" value="VantagemView" style="shape=umlLifeline;participant=umlBoundary;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;verticalAlign=top;spacingTop=36;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="190" y="200" width="50" height="460" as="geometry" />
+        </mxCell>
+        <mxCell id="vcdz9cu3LAZGO0Cs-m67-39" value=" new Vantagem(valor double, descricao string, foto string)" style="text;align=center;fontStyle=1;verticalAlign=middle;spacingLeft=3;spacingRight=3;strokeColor=none;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=9;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="530" y="380" width="80" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="vcdz9cu3LAZGO0Cs-m67-41" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;" edge="1" parent="1" target="vcdz9cu3LAZGO0Cs-m67-33">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="440" y="419.6600000000001" as="sourcePoint" />
+            <mxPoint x="710.0000000000002" y="420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vcdz9cu3LAZGO0Cs-m67-43" value="boolean" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;" edge="1" parent="1" source="vcdz9cu3LAZGO0Cs-m67-34">
+          <mxGeometry x="0.0055" y="-5" relative="1" as="geometry">
+            <mxPoint x="460" y="430" as="sourcePoint" />
+            <mxPoint x="440" y="465" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vcdz9cu3LAZGO0Cs-m67-44" value="boolean" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;" edge="1" parent="1">
+          <mxGeometry x="0.0055" y="-5" relative="1" as="geometry">
+            <mxPoint x="420" y="475" as="sourcePoint" />
+            <mxPoint x="220" y="475" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vcdz9cu3LAZGO0Cs-m67-45" value="Confirmação" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;" edge="1" parent="1">
+          <mxGeometry x="0.0055" y="-5" relative="1" as="geometry">
+            <mxPoint x="210" y="485" as="sourcePoint" />
+            <mxPoint x="50" y="485" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
