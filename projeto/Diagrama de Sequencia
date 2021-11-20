@@ -1,0 +1,57 @@
+<mxfile host="app.diagrams.net" modified="2021-11-07T18:59:22.162Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36 Edg/95.0.1020.40" etag="x5yVBV33phLuqOrgp1Sr" version="15.7.0" type="github">
+  <diagram id="kgpKYQtTHZ0yAKxKKP6v" name="Page-1">
+    <mxGraphModel dx="1036" dy="663" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="3nuBFxr9cyL0pnOWT2aG-1" value=":UsuarioController" style="shape=umlLifeline;perimeter=lifelinePerimeter;container=1;collapsible=0;recursiveResize=0;rounded=0;shadow=0;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="140" y="100" width="140" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="gTRf1oynJo5Tt2TjJs7Y-3" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;" vertex="1" parent="3nuBFxr9cyL0pnOWT2aG-1">
+          <mxGeometry x="65" y="90" width="10" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="gTRf1oynJo5Tt2TjJs7Y-32" value="getUsuario(): Usuario" style="text;align=center;fontStyle=1;verticalAlign=middle;spacingLeft=3;spacingRight=3;strokeColor=none;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=10;" vertex="1" parent="3nuBFxr9cyL0pnOWT2aG-1">
+          <mxGeometry x="90" y="190" width="80" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="3nuBFxr9cyL0pnOWT2aG-5" value=":Login" style="shape=umlLifeline;perimeter=lifelinePerimeter;container=1;collapsible=0;recursiveResize=0;rounded=0;shadow=0;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="360" y="100" width="110" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="gTRf1oynJo5Tt2TjJs7Y-4" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;" vertex="1" parent="3nuBFxr9cyL0pnOWT2aG-5">
+          <mxGeometry x="50" y="90" width="10" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="gTRf1oynJo5Tt2TjJs7Y-26" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fontSize=10;" vertex="1" parent="3nuBFxr9cyL0pnOWT2aG-5">
+          <mxGeometry x="60" y="150" width="10" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="gTRf1oynJo5Tt2TjJs7Y-27" value="autenticar(): void" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;entryX=1;entryY=0;fontSize=10;" edge="1" target="gTRf1oynJo5Tt2TjJs7Y-26" parent="3nuBFxr9cyL0pnOWT2aG-5">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="65" y="130" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="95" y="130" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gTRf1oynJo5Tt2TjJs7Y-19" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="200" y="249.67000000000002" as="sourcePoint" />
+            <mxPoint x="400" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gTRf1oynJo5Tt2TjJs7Y-20" value="fazerLogin(email string, senha string)" style="text;align=center;fontStyle=1;verticalAlign=middle;spacingLeft=3;spacingRight=3;strokeColor=none;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="270" y="220" width="80" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="gTRf1oynJo5Tt2TjJs7Y-28" value="Usuario" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="580" y="100" width="100" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="gTRf1oynJo5Tt2TjJs7Y-29" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fontSize=10;" vertex="1" parent="gTRf1oynJo5Tt2TjJs7Y-28">
+          <mxGeometry x="45" y="80" width="10" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="gTRf1oynJo5Tt2TjJs7Y-31" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;fontSize=10;" edge="1" parent="1" target="gTRf1oynJo5Tt2TjJs7Y-28">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="200" y="320" as="sourcePoint" />
+            <mxPoint x="360" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

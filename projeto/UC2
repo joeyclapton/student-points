@@ -1,0 +1,91 @@
+<mxfile host="app.diagrams.net" modified="2021-11-07T22:32:05.962Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36 Edg/95.0.1020.40" etag="0PQ7ce0qb7CR1swmMwx0" version="15.7.0" type="github">
+  <diagram id="iBL1bhxYiwFcc1aCs4lC" name="Page-1">
+    <mxGraphModel dx="1072" dy="686" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="996AhIBRK3klnGlzZ0up-1" value=":InstituicaoController" style="shape=umlLifeline;perimeter=lifelinePerimeter;container=1;collapsible=0;recursiveResize=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="310" y="100" width="140" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="996AhIBRK3klnGlzZ0up-2" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;" vertex="1" parent="996AhIBRK3klnGlzZ0up-1">
+          <mxGeometry x="65" y="90" width="10" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="996AhIBRK3klnGlzZ0up-4" value="&lt;&lt;entity Collection&gt;&gt;&#xa;Professores" style="shape=umlLifeline;perimeter=lifelinePerimeter;container=1;collapsible=0;recursiveResize=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="530" y="100" width="110" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="996AhIBRK3klnGlzZ0up-5" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;" vertex="1" parent="996AhIBRK3klnGlzZ0up-4">
+          <mxGeometry x="45" y="130" width="10" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="996AhIBRK3klnGlzZ0up-8" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="390" y="250" as="sourcePoint" />
+            <mxPoint x="570" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="996AhIBRK3klnGlzZ0up-9" value="listarProfessores(): List&lt;Professores)" style="text;align=center;fontStyle=1;verticalAlign=middle;spacingLeft=3;spacingRight=3;strokeColor=none;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=9;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="220" width="80" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="996AhIBRK3klnGlzZ0up-17" value="" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;fontSize=9;" edge="1" parent="1" source="996AhIBRK3klnGlzZ0up-4">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="360" y="260" as="sourcePoint" />
+            <mxPoint x="400" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="996AhIBRK3klnGlzZ0up-18" value="Lista professores" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="440" y="290" width="100" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="996AhIBRK3klnGlzZ0up-21" value="viewListarProfessores" style="shape=umlLifeline;perimeter=lifelinePerimeter;container=1;collapsible=0;recursiveResize=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="110" y="100" width="140" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="996AhIBRK3klnGlzZ0up-22" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;" vertex="1" parent="996AhIBRK3klnGlzZ0up-21">
+          <mxGeometry x="65" y="90" width="10" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="996AhIBRK3klnGlzZ0up-26" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;" edge="1" parent="996AhIBRK3klnGlzZ0up-21">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="80" y="146.0000000000001" as="sourcePoint" />
+            <mxPoint x="260" y="146.0000000000001" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="996AhIBRK3klnGlzZ0up-44" value="" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;fontSize=9;entryX=1.3;entryY=0.633;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="996AhIBRK3klnGlzZ0up-21">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="60" y="230" as="sourcePoint" />
+            <mxPoint x="-60" y="230.00000000000006" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="996AhIBRK3klnGlzZ0up-45" value="HTML" style="text;align=center;fontStyle=1;verticalAlign=middle;spacingLeft=3;spacingRight=3;strokeColor=none;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=9;" vertex="1" parent="996AhIBRK3klnGlzZ0up-21">
+          <mxGeometry x="-40" y="200" width="80" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="996AhIBRK3klnGlzZ0up-46" value="listarProfessores()" style="text;align=center;fontStyle=1;verticalAlign=middle;spacingLeft=3;spacingRight=3;strokeColor=none;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=9;strokeWidth=1;" vertex="1" parent="996AhIBRK3klnGlzZ0up-21">
+          <mxGeometry x="-40" y="110" width="80" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="996AhIBRK3klnGlzZ0up-23" value="" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;fontSize=9;entryX=1.3;entryY=0.633;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="370" y="333" as="sourcePoint" />
+            <mxPoint x="190" y="332.93000000000006" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="996AhIBRK3klnGlzZ0up-24" value="Lista professores" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="230" y="300" width="100" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="996AhIBRK3klnGlzZ0up-25" value="listarProfessores()" style="text;align=center;fontStyle=1;verticalAlign=middle;spacingLeft=3;spacingRight=3;strokeColor=none;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=9;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="220" width="80" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="996AhIBRK3klnGlzZ0up-40" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fontSize=9;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="180" width="10" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="996AhIBRK3klnGlzZ0up-41" value="" style="shape=umlLifeline;participant=umlActor;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;verticalAlign=top;spacingTop=36;outlineConnect=0;fontSize=9;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="35" y="90" width="20" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="996AhIBRK3klnGlzZ0up-43" value="Usuario&#xa;Parceiro" style="text;align=center;fontStyle=1;verticalAlign=middle;spacingLeft=3;spacingRight=3;strokeColor=none;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="35" y="130" width="80" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="996AhIBRK3klnGlzZ0up-47" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="60" y="245.31000000000012" as="sourcePoint" />
+            <mxPoint x="160" y="245" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
