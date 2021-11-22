@@ -1,15 +1,15 @@
 import { useState } from 'react'
+import { Client } from "../services/api";
+
 import styles from '../styles/Login.module.css'
 import shared from '../styles/Shared.module.css'
 
 export default function Login() {
-  const [email, setEmail] = useState(undefined)
-  const [pass, setPass] = useState(undefined)
+  const [usuario, setUsuario] = useState(undefined)
+  const [senha, setSenha] = useState(undefined)
 
   const login = () => {
-    const payload = { email, pass }
-    console.log(payload)
-    // make api call
+    Client.post("/signin", { usuario, senha })
   }
 
   return (
@@ -22,8 +22,8 @@ export default function Login() {
             id="email"
             type="email"
             placeholder="joao@gmail.com"
-            value={email && email}
-            onChange={(e) => setEmail(e.target.value)}
+            value={usuario && usuario}
+            onChange={(e) => setUsuario(e.target.value)}
           />
         </div>
 
@@ -33,12 +33,14 @@ export default function Login() {
             id="password"
             type="password"
             placeholder="12345678"
-            value={pass && pass}
-            onChange={(e) => setPass(e.target.value)}
+            value={senha && senha}
+            onChange={(e) => setSenha(e.target.value)}
           />
         </div>
 
-        <button>Entrar</button>
+        <button
+          onClick={() => login()}
+        >Entrar</button>
       </main>
     </div>
   )

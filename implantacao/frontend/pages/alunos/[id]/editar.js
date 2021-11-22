@@ -8,14 +8,14 @@ export default function Aluno() {
   return (
     <div className={shared.container}>
       <main className={shared.main}>
-        <h1>Aluno {id}</h1>
+        <h1>Editando Aluno {id}</h1>
         <h2>Saldo: {0}</h2>
 
         <div>
           <div className={shared.inputgroup}>
-            <label htmlFor="name">Nome</label>
+            <label htmlFor="nome">Nome</label>
             <input
-              id="name"
+              id="nome"
               type="text"
               placeholder="João Silva"
             />
@@ -63,4 +63,4 @@ export default function Aluno() {
   )
 }
 
-Aluno.Title = "Aluno"
+Aluno.Title = "Editar Aluno"
