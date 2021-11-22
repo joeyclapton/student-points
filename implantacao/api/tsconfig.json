@@ -1,34 +1,24 @@
 {
-    "compilerOptions": {
-      "target": "ES2018",
-      "module": "ESNext",
-      "moduleResolution": "Node",
-      "lib": [
-        "ESNext",
-        "ESNext.AsyncIterable",
-        "DOM"
-      ],
-      "esModuleInterop": true,
-      "allowJs": true,
-      "sourceMap": true,
-      "strict": true,
-      "noEmit": true,
-      "baseUrl": ".",
-      "paths": {
-        "~/*": [
-          "./*"
-        ],
-        "@/*": [
-          "./*"
-        ]
-      },
-      "types": [
-        "@types/node",
-        "@nuxt/types",
-        "./@types/vue-shim"
-      ]
-    },
-    "exclude": [
-      "node_modules"
-    ]
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "outDir": "./dist",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "strictPropertyInitialization": false
+  },
+  "include": [
+    "./src/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/*.spec.ts"
+  ]
 }
