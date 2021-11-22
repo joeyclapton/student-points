@@ -1,5 +1,5 @@
 {
-  "name": "frontend",
+  "name": "school-frontend",
   "private": true,
   "scripts": {
     "dev": "next dev",
