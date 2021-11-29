@@ -1,32 +1,27 @@
 import { Model, DataTypes, Sequelize, Optional } from "sequelize";
-import AppError from "../errors/AppError";
 import Usuario from "./Usuario";
 
-export interface IAtributosAluno {
+export interface IAtributosProfessor {
   id: number,
   usuario_id: number,
   nome: string,
-  email: string,
-  rg: string,
+  departamento: string,
   cpf: string,
-  endereco: string,
   saldo: number
 }
-export interface IAtributosAlunoCriacao extends Optional<IAtributosAluno, 'id'> { }
+export interface IAtributosProfessorCriacao extends Optional<IAtributosProfessor, 'id'> { }
 
-class Aluno extends Model<IAtributosAluno, IAtributosAlunoCriacao> implements IAtributosAluno {
+class Professor extends Model<IAtributosProfessor, IAtributosProfessorCriacao> implements IAtributosProfessor {
 
   id!: number;
   usuario_id!: number;
   nome!: string;
-  email!: string;
-  rg!: string;
-  endereco!: string;
+  departamento!: string;
   cpf!: string;
   saldo!: number;
 
   static initialize(sequelize: Sequelize) {
-    Aluno.init({
+    Professor.init({
       id: {
         type: DataTypes.INTEGER().UNSIGNED,
         primaryKey: true,
@@ -43,15 +38,7 @@ class Aluno extends Model<IAtributosAluno, IAtributosAlunoCriacao> implements IA
         type: DataTypes.STRING(120),
         allowNull: false
       },
-      email: {
-        type: DataTypes.STRING(120),
-        allowNull: false
-      },
-      rg: {
-        type: DataTypes.STRING(120),
-        allowNull: false
-      },
-      endereco: {
+      departamento: {
         type: DataTypes.STRING(120),
         allowNull: false
       },
@@ -66,17 +53,17 @@ class Aluno extends Model<IAtributosAluno, IAtributosAlunoCriacao> implements IA
     },
       {
         hooks: {
-          afterDestroy: async (aluno, options) => {
+          afterDestroy: async (professor, options) => {
             await Usuario.destroy({
               where: {
-                id: aluno.get().usuario_id,
+                id: professor.get().usuario_id,
               }
             }).catch(function (error) {
               console.log(error)
             });
           },
         },
-        tableName: "aluno",
+        tableName: "professor",
         timestamps: false,
         paranoid: false,
         createdAt: false,
@@ -86,4 +73,4 @@ class Aluno extends Model<IAtributosAluno, IAtributosAlunoCriacao> implements IA
   }
 }
 
-export default Aluno;
+export default Professor;

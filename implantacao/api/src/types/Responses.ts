@@ -25,6 +25,15 @@ export type UpdateResponse = {
   id: number
 }
 
+export type EnviarMoeda = {
+  enviada: boolean,
+  nome?: string,
+  erros: any
+} | {
+  enviada: boolean,
+  id: number
+}
+
 export type ReadResponse<T> = {
   titulo: string,
   error: any

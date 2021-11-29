@@ -11,39 +11,42 @@ interface ILoginUsuario {
 
 type SigninReponse = string | {
   autenticado: boolean,
-  razao?: "Senha incorreta!"
+  usuario_id?: number,
+  razao?: "Dados incorretos!",
+  tipoUsuario?: string,
 }
 
 class UsuarioController {
   public signin: RequestHandler<never, SigninReponse, ILoginUsuario> = async (req, res) => {
     const { usuario, senha } = req.body;
 
-    Usuario.findOne({
-      attributes: ['id', 'senha'],
+    await Usuario.findOne({
+      attributes: ['id', 'senha', 'tipo'],
       where: {
         usuario: usuario
       }
     })
       .then(usuario => {
         if (!usuario) {
-          return res.status(404).send("Usuario nao encontrado.");
+          return res.status(404).send("Usuário não encontrado.");
         }
 
         if (senha != usuario.get().senha) {
           return res.status(401).send({
             autenticado: false,
-            razao: "Senha incorreta!"
+            razao: "Dados incorretos!"
           });
         }
 
-        res.status(200).send({ autenticado: true });
+        return res.status(200).send({ usuario_id: usuario.get().id, autenticado: true, tipoUsuario: usuario.get().tipo });
       })
       .catch(err => {
-        res.status(500).send("Erro -> " + err);
+        return res.status(500).send("Erro -> " + err);
       });
   }
 
   public create: CreateRequestHandler = async (request, response) => {
+    const tipos = ["A", "P"];
     const scheme = yup.object().shape({
       usuario: yup
         .string()
@@ -52,7 +55,8 @@ class UsuarioController {
         .string()
         .required("'senha' obrigatória!")
         .min(8, "'senha' deve ter no mínimo 8 caracteres!")
-        .max(64, "'senha' deve ter no máximo 64 caracteres!")
+        .max(64, "'senha' deve ter no máximo 64 caracteres!"),
+      tipo: yup.mixed().oneOf(tipos, `Tipo deve ser algum destes: ${tipos}.`).required(),
     });
 
     // Validando com o esquema criado:
@@ -66,14 +70,15 @@ class UsuarioController {
       });
     }
 
-    const { usuario, senha } = request.body;
+    const { usuario, senha, tipo } = request.body;
 
     const user = Usuario.build({
       usuario,
-      senha: senha
+      senha: senha,
+      tipo
     });
 
-    user
+    await user
       .save()
       .then(() => {
         return response.status(201).json({
@@ -109,13 +114,13 @@ class UsuarioController {
       }
     })
       .then(dado => {
-        response.status(204).json({
+        return response.status(204).json({
           deletado: true,
           dado
         });
       })
       .catch(function (error) {
-        response.status(500).json({
+        return response.status(500).json({
           deletado: false,
           errors: error
         });
@@ -128,7 +133,6 @@ class UsuarioController {
     const scheme = yup.object().shape({
       senha: yup
         .string()
-        .required("'senha' obrigatória!")
         .min(8, "'senha' deve ter no mínimo 8 caracteres!")
         .max(64, "'senha' deve ter no máximo 64 caracteres!")
     });
@@ -152,16 +156,16 @@ class UsuarioController {
       }
     });
     if (!usuario) {
-      response.status(404).json({
+      return response.status(404).json({
         atualizado: false,
         nome: "Usuario não encontrado",
         erros: "O id que foi solicitado alteração não existe no banco de dados"
       });
     } else {
-      usuario.update({
+      await usuario.update({
         senha: senha,
       });
-      response.status(200).json({
+      return response.status(200).json({
         atualizado: true,
         id: usuario.id
       });
@@ -178,36 +182,32 @@ class UsuarioController {
       paranoid: false
     });
     if (!usuario) {
-      response.status(404).json(usuario);
+      return response.status(404).json(usuario);
     } else {
-      response.status(200).json(usuario);
+      return response.status(200).json(usuario);
     }
   }
 
-  // URI de exemplo: http://localhost:3000/api/usuario?pagina=1&limite=5&atributo=nome&ordem=DESC
-  // todos as querys são opicionais
   public getAll: GetAllRequestHandler<IAtributosUsuario> = async (request, response) => {
 
-    Usuario.findAndCountAll({
-      paranoid: false
+    await Usuario.findAndCountAll({
+      paranoid: false,
     })
       .then(usuarios => {
-        Usuario.findAll({
-          paranoid: false
-        })
-        response.status(200).json({
+        return response.status(200).json({
           dados: usuarios.rows,
           quantidade: usuarios.rows.length,
           total: usuarios.count
         });
       })
       .catch(function (error) {
-        response.status(500).json({
+        return response.status(500).json({
           titulo: "Erro interno do servidor!",
           error
         });
       });
   }
 }
+
 
 export default UsuarioController;

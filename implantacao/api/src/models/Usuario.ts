@@ -3,7 +3,8 @@ import { Model, DataTypes, Sequelize, Optional } from "sequelize";
 export interface IAtributosUsuario {
   id: number,
   usuario: string,
-  senha: string
+  senha: string,
+  tipo: 'A' | 'P'
 }
 export interface IAtributosUsuarioCriacao extends Optional<IAtributosUsuario, 'id'> { }
 
@@ -12,6 +13,7 @@ class Usuario extends Model<IAtributosUsuario, IAtributosUsuarioCriacao> impleme
   id!: number;
   usuario!: string;
   senha!: string;
+  tipo!: 'A' | 'P';
 
   static initialize(sequelize: Sequelize) {
     Usuario.init({
@@ -26,6 +28,10 @@ class Usuario extends Model<IAtributosUsuario, IAtributosUsuarioCriacao> impleme
       },
       senha: {
         type: DataTypes.STRING(64),
+        allowNull: false
+      },
+      tipo: {
+        type: DataTypes.ENUM("A", "P"),
         allowNull: false
       }
     },

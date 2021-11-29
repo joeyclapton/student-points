@@ -67,13 +67,13 @@ class ParceiroController {
       }
     })
       .then(dado => {
-        response.status(204).json({
+        return response.status(204).json({
           deletado: true,
           dado
         });
       })
       .catch(function (error) {
-        response.status(500).json({
+        return response.status(500).json({
           deletado: false,
           errors: error
         });
@@ -110,7 +110,7 @@ class ParceiroController {
       }
     });
     if (!parceiro) {
-      response.status(404).json({
+      return response.status(404).json({
         atualizado: false,
         nome: "Parceiro não encontrado",
         erros: "O id que foi solicitado alteração não existe no banco de dados"
@@ -119,7 +119,7 @@ class ParceiroController {
       parceiro.update({
         nome
       });
-      response.status(200).json({
+      return response.status(200).json({
         atualizado: true,
         id: parceiro.id
       });
@@ -136,9 +136,9 @@ class ParceiroController {
       paranoid: false
     });
     if (!parceiro) {
-      response.status(404).json(parceiro);
+      return response.status(404).json(parceiro);
     } else {
-      response.status(200).json(parceiro);
+      return response.status(200).json(parceiro);
     }
   }
 
@@ -153,14 +153,14 @@ class ParceiroController {
         Parceiro.findAll({
           paranoid: false
         })
-        response.status(200).json({
+        return response.status(200).json({
           dados: parceiros.rows,
           quantidade: parceiros.rows.length,
           total: parceiros.count
         });
       })
       .catch(function (error) {
-        response.status(500).json({
+        return response.status(500).json({
           titulo: "Erro interno do servidor!",
           error
         });
